@@ -1,0 +1,23 @@
+npm i nodemon -g
+instalar o insomnia
+--
+npm init -y
+npm i express
+-> nodemon --inspect ./index.js 3000
+
+Enunciado --------------------------------------------------------
+(x)get1- retorna nome-marca que mais possui modelos
+(x)get2- retorna nome-marca que menos possui modelos
+#caso empate retornas os 2 [marcaA, marcaB]
+(x)get3- ler parametro e retornar lista da marcas com mais modelos seguidos do valor(quantidade de modelos)
+*3*[marcaA -10, marcaB -9, marcaC -8]
+(x)get4- ler parametro e retornar lista da marcas com menos modelos seguidos do valor(quantidade de modelos)
+*3*[marcaA -1, marcaB -2, marcaC -3]
+#empate seguir ordem alfabetica
+()post5- ler parametro nome-marca e retornar modelos noCaseSensitive, marca n existe retorna []
+caminhos https
+item 1- marcas/maisModelos
+item 2- marcas/menosModelos
+item 3- marcas/listMaisModelos/X
+item 4- marcas/listMenosModelos/X
+item 5- marcas/listaModelos
