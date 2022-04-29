@@ -1,4 +1,3 @@
-
 function rule1(params) {
     let orderBrends = params.sort((a, b) => b.models.length - a.models.length)
     return orderBrends[0]
@@ -9,28 +8,42 @@ function rule2(params) {
     return orderBrends[0]
 }
 
-function rule3(params, number ) {
-    
+function rule3(params, number) {
+
     let orderBrends = params.sort((a, b) => b.models.length - a.models.length)
     let list = []
-    orderBrends.map((item,i) => {if(i<=number){list.push(`${item.brand}-${item.models.length}`)}})
-    
+    orderBrends.map((item, i) => {
+        if (i <= number) {
+            list.push(`${item.brand}-${item.models.length}`)
+        }
+    })
+
     return list
 }
 
-function rule4(params, number ) {
-    
+function rule4(params, number) {
+
     let orderBrends = params.sort((a, b) => a.models.length - b.models.length)
     let list = []
-    orderBrends.map((item,i) => {if(i<=number){list.push(`${item.brand}-${item.models.length}`)}})
-    
+    orderBrends.map((item, i) => {
+        if (i <= number) {
+            list.push(`${item.brand}-${item.models.length}`)
+        }
+    })
+
     return list
 }
 
+function rule5(params, brand) {
+    let car = params.filter(item => item.brand.toLowerCase() === brand.toLowerCase())
+    return car[0].models
+}
 
 
-
-
-
-
-export{ rule1, rule2, rule3, rule4 }
+export {
+    rule1,
+    rule2,
+    rule3,
+    rule4,
+    rule5
+}
