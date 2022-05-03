@@ -14,7 +14,7 @@ Enunciado --------------------------------------------------------
 (x)get4- ler parametro e retornar lista da marcas com menos modelos seguidos do valor(quantidade de modelos)
 *3*[marcaA -1, marcaB -2, marcaC -3]
 #empate seguir ordem alfabetica
-()post5- ler parametro nome-marca e retornar modelos noCaseSensitive, marca n existe retorna []
+(x)post5- ler parametro nome-marca e retornar modelos noCaseSensitive, marca n existe retorna []
 caminhos https
 item 1- marcas/maisModelos
 item 2- marcas/menosModelos
