@@ -31,7 +31,7 @@ app.get('/marcas/menosModelos', async (req, res) => {
 
 })
 
-app.get('/marcas/listMaisModelos/:x', async (req, res) => {
+app.get('/marcas/listaMaisModelos/:x', async (req, res) => {
   try {
     const data = JSON.parse(await readFile("car-list.json"))
     let number = req.params.x - 1
@@ -44,7 +44,7 @@ app.get('/marcas/listMaisModelos/:x', async (req, res) => {
 
 })
 
-app.get('/marcas/listMenosModelos/:x', async (req, res) => {
+app.get('/marcas/listaMenosModelos/:x', async (req, res) => {
   try {
     const data = JSON.parse(await readFile("car-list.json"))
     let number = req.params.x - 1
@@ -57,7 +57,7 @@ app.get('/marcas/listMenosModelos/:x', async (req, res) => {
 
 })
 
-app.post('/marcas/listModelos', async (req, res) => {
+app.post('/marcas/listaModelos', async (req, res) => {
   try {
     const data = JSON.parse(await readFile("car-list.json"))
     let brandName = req.body.brand
