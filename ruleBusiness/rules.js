@@ -1,20 +1,20 @@
-function rule1(params) {
+function moreModels(params) {
     params = sortT(params)
     let orderBrends = params.sort((a, b) => b.models.length - a.models.length)
     return orderBrends[0]
 }
 
-function rule2(params) {
+function lessModels(params) {
     params = sortT(params)
     let orderBrends = params.sort((a, b) => a.models.length - b.models.length)
     return orderBrends[0]
 }
 
-function rule3(params, number) {
+function moreModelsList(params, number) {
     params = sortT(params)
     let orderBrends = params.sort((a, b) => b.models.length - a.models.length)
     let list = []
-    orderBrends.map((item, i) => {
+    orderBrends.forEach((item, i) => {
         if (i <= number) {
             list.push(`${item.brand}-${item.models.length}`)
         }
@@ -23,11 +23,11 @@ function rule3(params, number) {
     return list
 }
 
-function rule4(params, number) {
+function lessModelsList(params, number) {
     params = sortT(params)
     let orderBrends = params.sort((a, b) => a.models.length - b.models.length)
     let list = []
-    orderBrends.map((item, i) => {
+    orderBrends.forEach((item, i) => {
         if (i <= number) {
             list.push(`${item.brand}-${item.models.length}`)
         }
@@ -36,33 +36,31 @@ function rule4(params, number) {
     return list
 }
 
-function rule5(params, brand) {
+function uniqModel(params, brand) {
     params = sortT(params)
     let car = params.filter(item => item.brand.toLowerCase() === brand.toLowerCase())
     return car[0].models
 }
 
-
 export {
-    rule1,
-    rule2,
-    rule3,
-    rule4,
-    rule5
+    moreModels,
+    lessModels,
+    moreModelsList,
+    lessModelsList,
+    uniqModel
 }
 
 function sortT(params) {
     let helper = params.map(item => item.brand)
     helper = helper.sort()
-
     let anser = []
-    helper.map(name => {
-  params.map(item => {
+
+    helper.forEach(name => {
+        params.forEach(item => {
             if (item.brand === name) {
-                anser.push( item)
+                anser.push(item)
             }
         })
     })
-
     return anser
 }
